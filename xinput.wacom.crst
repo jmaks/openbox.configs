@@ -1,0 +1,7 @@
+#!/bin/sh
+
+xinput create-master synaptic
+xinput reattach "SynPS/2 Synaptics TouchPad" "synaptic pointer"
+
+~/.config/openbox/xicursorset/xicursorset 20 left_ptr DMZ-White
+~/.config/openbox/xicursorset/xicursorset 2 right_ptr DMZ-Black

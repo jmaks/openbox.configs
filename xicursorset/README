@@ -1,0 +1,27 @@
+xicursorset is a tool to set the cursor image for an XInput2 pointer.
+
+The first argument to pass is a pointer id, you can get it by running
+'xinput list' and analyzing its output.
+
+You need to specify an image name supplied by the theme you are using, and you
+can optionally pass a cursor theme name to pick up the image from it.
+
+Examples of use:
+
+Get the possible pointer ids with xinput:
+$ xinput list | grep "master pointer"
+⎡ Virtual core pointer                          id=2    [master pointer  (3)]
+⎡ Extra pointer                                 id=13   [master pointer  (14)]
+
+Set the cursor with id=13 to the 'left_ptr' image from the 'redglass' theme
+$ ./xicursorset 13 left_ptr redglass
+
+Set the cursor with id=2 to the 'right_ptr' image from the 'whiteglass' theme
+$ ./xicursorset 2 right_ptr whiteglass
+
+Set the cursor with id=2 to the 'left_ptr' image from the default theme
+$ ./xicursorset 2 left_ptr
+
+
+NOTE: the "redglass" and "whiteglass" cursor themes are sometimes provided in
+a separate package called "xcursor-themes".
